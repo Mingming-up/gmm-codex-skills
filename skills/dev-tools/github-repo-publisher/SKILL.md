@@ -15,6 +15,7 @@ Publish the local repository all the way to GitHub. Prefer the simplest authenti
 2. Inspect the local project:
    - Run `git status --short --branch`.
    - If it is not a Git repository, initialize it on `main`.
+   - Set and verify the correct Git author identity before committing.
    - Commit the intended files before pushing.
    - For public repos, scan for obvious secrets and local-only paths before push.
 3. Resolve the GitHub owner:
@@ -27,7 +28,29 @@ Publish the local repository all the way to GitHub. Prefer the simplest authenti
 5. Push and verify:
    - Run `git push -u origin main`.
    - Confirm with `git status --short --branch`.
-   - If available, call the GitHub connector's `_get_repo` to verify visibility, default branch, permissions, and URL.
+   - Verify recent commits show the expected author and committer.
+   - If available, call the GitHub connector's `_get_repo` and `_fetch_commit` to verify visibility, default branch, URL, and GitHub-linked commit author.
+
+## Author Identity
+
+Never invent a Git author email, including plausible `users.noreply.github.com` addresses. A wrong email can attribute commits to another GitHub user and pollute the repository contributors list.
+
+Before committing, inspect and set the repository-local identity:
+
+```powershell
+git config user.name
+git config user.email
+git config user.name '<github-login-or-user-name>'
+git config user.email '<confirmed-email>'
+```
+
+Use the user's normal email if they allow it. If privacy is requested, use a confirmed GitHub noreply address only when it is known from the user's account settings or explicit instruction. If the correct email is unknown, ask the user instead of guessing.
+
+After committing and before pushing, verify:
+
+```powershell
+git log --format="%h %an <%ae> | %cn <%ce> | %s" -5
+```
 
 ## REST API Fallback
 
