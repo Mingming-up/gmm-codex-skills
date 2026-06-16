@@ -1,0 +1,8 @@
+﻿interface:
+  display_name: "Codex Reconnecting Solve"
+  short_description: "Fix Codex reconnecting via local proxy."
+  default_prompt: "Use $codex-reconnecting-solve to diagnose and fix Codex reconnecting on Windows when a local proxy is involved."
+
+policy:
+  allow_implicit_invocation: true
+
