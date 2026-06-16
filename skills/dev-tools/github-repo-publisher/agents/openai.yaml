@@ -1,4 +1,7 @@
 interface:
   display_name: "GitHub Repo Publisher"
   short_description: "Create GitHub repos and push local projects."
-  default_prompt: "Use $github-repo-publisher to create a GitHub repository for this local project and push it."
+  default_prompt: "Use $github-repo-publisher only after I explicitly ask you to push, upload, publish, sync, or create a GitHub repository for this local project."
+
+policy:
+  allow_implicit_invocation: false

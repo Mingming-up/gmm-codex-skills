@@ -1,13 +1,15 @@
 ---
 name: github-repo-publisher
-description: Publish a local project or newly prepared repository to GitHub end to end. Use when the user asks Codex to create a GitHub repository, push a local project to GitHub, upload a local repo, create a public/private GitHub repo, or repeat the gmm-codex-skills workflow. Covers GitHub connector limitations, GitHub CLI fallback, Git Credential Manager plus REST API repository creation, remote setup, push, and verification.
+description: Publish a local project or newly prepared repository to GitHub end to end, but only when the user explicitly asks to create a GitHub repository, push a local project to GitHub, upload a local repo, publish, or sync to a repository. Do not use for local-only skill creation, local skill edits, general GitHub discussion, or because a file changed. Covers GitHub connector limitations, GitHub CLI fallback, Git Credential Manager plus REST API repository creation, remote setup, push, and verification.
 ---
 
 # GitHub Repo Publisher
 
 ## Overview
 
-Publish the local repository all the way to GitHub. Prefer the simplest authenticated path available, but do not stop just because the GitHub connector lacks a create-repository tool.
+Publish the local repository all the way to GitHub only after an explicit user instruction to push, upload, publish, sync, or create the GitHub repository. Prefer the simplest authenticated path available, but do not stop just because the GitHub connector lacks a create-repository tool.
+
+Do not infer publish intent from local skill work. If the user asks to create, edit, organize, or install skills, keep those changes local unless they explicitly ask to push, upload, publish, or sync the repository to GitHub.
 
 ## Workflow
 
