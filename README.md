@@ -39,3 +39,12 @@
 ### Career
 
 - `tailored-resume-generator`【自建】：根据岗位描述和个人背景生成定制化简历。
+- `CareerForge`【引用】：AI 求职全链路套件，包含岗位搜索、简历匹配、简历生成、求职信、模拟面试和 Offer 决策 6 个 skills。
+  - `job-hunt`：多平台岗位搜索、匹配筛选和 Excel 导出。
+  - `resume-match`：简历与 JD 的匹配度评分和优化建议。
+  - `resume-craft`：简历生成与优化，支持 HTML/PDF 和 Word 模板。
+  - `cover-letter`：邮件求职信和招聘软件打招呼消息生成。
+  - `mock-interview`：HR、业务主管、高管三轮模拟面试。
+  - `offer-decision`：多 Offer 对比、薪资谈判话术和决策报告。
+
+CareerForge 放在 `skills/career/careerforge/` 下，其中 `skills/` 是 6 个 Skill 本体，`templates/word/` 是 `resume-craft` 生成 Word 简历时需要的模板依赖。
