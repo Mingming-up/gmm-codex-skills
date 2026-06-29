@@ -14,6 +14,7 @@
 ### Writing & Research
 
 - `content-research-writer`【自建】：支持带研究和引用的内容写作。
+- `aihot`【自建】：查询 AI HOT 中文 AI 资讯、日报、热点和行业动态。
 - `nature-academic-search`【自建】：学术文献检索、引用验证和多来源搜索工作流。
 - `paper-write`【自建】：本科、硕士论文写作、润色、扩写、翻译和防 AIGC 等工作流。
 - `patent-write`【自建】：中文发明专利撰写、改写、统稿和权利要求处理。
@@ -35,6 +36,7 @@
 - `mcp-builder`【引用】：MCP Server 构建和工具集成指南。
 - `codex-reconnecting-solve`【自建】：排查和修复 Windows 上 Codex Desktop 反复重连的问题。
 - `github-repo-publisher`【自建】：在明确收到指令后，将本地项目创建为 GitHub 仓库并推送。
+- `hatch-pet`【自建】：创建、修复、校验和打包 Codex 兼容的动画 pet spritesheet。
 
 ### Career
 
